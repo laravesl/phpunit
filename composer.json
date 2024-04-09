@@ -7,7 +7,7 @@
         "jackiedo/dotenv-editor": "*"
     },
     "license": "BSD-3-Clause",
-    "version":"1.0.2",
+    "version":"1.0.0",
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
