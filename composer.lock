@@ -2441,10 +2441,12 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+
+    ],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "version":"v1.0.0",
     "platform": {
