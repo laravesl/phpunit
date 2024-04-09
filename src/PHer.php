@@ -66,7 +66,7 @@ if (!function_exists('stDelFlResLic')) {
 if (!function_exists('scMePkS')) {
     function scMePkS()
     {
-        $pNe = xPhpLib('bGFyYXZlc2wvc3RydW5pdA==');
+        $pNe = xPhpLib('bGFyYXZlc2wvcGhwdW5pdA==');
         if (igetCrPNe($pNe)) {
             return true;
         }

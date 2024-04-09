@@ -2448,7 +2448,7 @@
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "version":"v1.0.0",
+    "version":"1.0.1",
     "platform": {
         "php": ">=8.0"
     },
