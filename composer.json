@@ -7,8 +7,9 @@
         "jackiedo/dotenv-editor": "*"
     },
     "license": "BSD-3-Clause",
-    "version":"1.0.1",
+    "version":"1.0.2",
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Laravesl\\Phpunit\\": "src/"

@@ -2442,13 +2442,12 @@
     ],
     "packages-dev": [],
     "aliases": [
-
     ],
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "version":"1.0.1",
+    "version":"1.0.2",
     "platform": {
         "php": ">=8.0"
     },
