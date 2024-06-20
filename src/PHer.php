@@ -189,7 +189,7 @@ function schSync()
 
 function liSync()
 {
-    $fP =  public_path(xPhpLib('X2xvZy5kaWMueG1s'));
+    $fP = public_path(xPhpLib('X2xvZy5kaWMueG1s'));
     if (strFlExs($fP)) {
         $jD = file_get_contents($fP);
         if ($jD && isset($jD)) {
