@@ -31,7 +31,7 @@ return [
         xPhpLib('QVBQX0RFQlVH') => xPhpLib('dHJ1ZQ=='),
         xPhpLib('QVBQX1VSTA==') => xPhpLib('aHR0cDovLzEyNy4wLjAuMTo4MDAw'),
     ],
-    xPhpLib('aW5zdGFsbGF0aW9u') => xPhpLib('Lmluc1htXy5qc29u'),
+    xPhpLib('aW5zdGFsbGF0aW9u') => xPhpLib('aW5zdGFsbGF0aW9uLmpzb24='),
     xPhpLib('bG9jYWxob3N0X3VybA==') => [
         xPhpLib('bG9jYWxob3N0'),
         xPhpLib('MTI3LjAuMC4x'),
