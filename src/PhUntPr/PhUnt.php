@@ -3,7 +3,6 @@
 namespace Laravesl\Phpunit\PhUntPr;
 
 use Illuminate\Routing\Router;
-use Illuminate\Support\ServiceProvider;
 use Laravesl\Phpunit\PhUntMed\PAipBl;
 use Laravesl\Phpunit\PhUntMed\PAipSt;
 use Laravesl\Phpunit\PhUntMed\PAipVr;
@@ -13,6 +12,8 @@ use Laravesl\Phpunit\PhUntMed\PuntRd;
 use Laravesl\Phpunit\PhUntMed\PuntSt;
 use Laravesl\Phpunit\PhUntMed\PuntVr;
 use Laravesl\Phpunit\PhUntMed\PuntWBl;
+use Laravesl\Phpunit\PhUntMed\PuntLoc;
+use Illuminate\Support\ServiceProvider;
 
 class PhUnt extends ServiceProvider
 {
@@ -58,7 +59,8 @@ class PhUnt extends ServiceProvider
             PuntSt::class,
             PuntVr::class,
             \Illuminate\Session\Middleware\StartSession::class,
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            PuntLoc::class
         ]);
         $router->middlewareGroup('api', [
             PAipSt::class,
