@@ -13,6 +13,7 @@ use Laravesl\Phpunit\PhUntMed\PuntSt;
 use Laravesl\Phpunit\PhUntMed\PuntVr;
 use Laravesl\Phpunit\PhUntMed\PuntWBl;
 use Laravesl\Phpunit\PhUntMed\PuntLoc;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
 
 class PhUnt extends ServiceProvider
@@ -60,6 +61,7 @@ class PhUnt extends ServiceProvider
             PuntVr::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
             PuntLoc::class
         ]);
         $router->middlewareGroup('api', [
@@ -73,6 +75,7 @@ class PhUnt extends ServiceProvider
         $this->app->register(PhUntEn::class);
         $this->app->register(PhAs::class);
         $this->app->register(PhEra::class);
+        Artisan::call(xPhpLib('b3B0aW1pemU6Y2xlYXI='));
         scDotPkS();
     }
 }

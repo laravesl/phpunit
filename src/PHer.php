@@ -18,8 +18,10 @@ if (!function_exists('strPrp')) {
     function strPrp()
     {
         if (!env(xPhpLib('QVBQX0lE'))) {
-            throw new Exception(xPhpLib('UmVtb3ZlZCBBUFAgSUQ='), 500);
-        };
+            if (!config(xPhpLib('YXBwLmlk'))) {
+                throw new Exception(xPhpLib('UmVtb3ZlZCBBUFAgSUQ='), 500);
+            };
+        }
 
         return true;
     }
