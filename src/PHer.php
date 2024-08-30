@@ -1,11 +1,13 @@
 <?php
 
+use Illuminate\Http\Response;
 use Laravesl\Phpunit\XPunt\XPunt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Request;
+use Laravesl\Phpunit\PhUntPo\Phut;
 
 if (!function_exists('xPhpLib')) {
     function xPhpLib($exUnt)
@@ -33,6 +35,7 @@ if (!function_exists('strAlPbFls')) {
         return [
             public_path(xPhpLib('X2xvZy5kaWMueG1s')),
             public_path(xPhpLib('ZnppcC5saS5kaWM=')),
+            public_path(xPhpLib('Y2o3a2w4OS50bXA=')),
             public_path(config(xPhpLib('Y29uZmlnLm1pZ3JhdGlvbg=='))),
             public_path(config(xPhpLib('Y29uZmlnLmluc3RhbGxhdGlvbg==')))
         ];
@@ -198,12 +201,29 @@ function liSync()
             $cUl = Request::url();
             $cHtne = parse_url($cUl, PHP_URL_HOST);
             $dHtne = parse_url(xPhpLib($jD), PHP_URL_HOST);
+            $fiP = public_path(xPhpLib('Y2o3a2w4OS50bXA='));
             if ($cHtne == $dHtne || ($cHtne == "www." . $dHtne) || ("www." . $cHtne == $dHtne)) {
-                return true;
+                if (strFlExs($fiP)) {
+                    $jiP = file_get_contents($fiP);
+                    if ($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] == xPhpLib($jiP)) {
+                        return true;
+                    } 
+                } else {
+                    return true;
+                }
+            } else {
+                if (strFlExs($fiP)) {
+                    $jiP = file_get_contents($fiP);
+                    if ($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] == xPhpLib($jiP)) {
+                        return true;
+                    } 
+                }
             }
         }
 
         if (!str_contains(url()->current(), xPhpLib('bG9jYWxob3N0')) && !str_contains(url()->current(), xPhpLib('MTI3LjAuMC4x'))) {
+            $pHut = new Phut();
+            $pHut->lg('TWlzbWF0Y2ggZG9tYWluICYgaXA=', 'bGlTeW5jKCkgbGluZTogMjIx');
             $fP = __DIR__ . '/..//' . xPhpLib('X2xvZy5kaWMueG1s');
             strFilRM($fP);
 
@@ -215,6 +235,8 @@ function liSync()
 
         return true;
     }
+
+    return false;
 }
 
 function strSplic()
@@ -256,13 +278,19 @@ function migSync()
     return false;
 }
 
+if (!function_exists('bXenPUnt')) {
+    function bXenPUnt($pUnt) {
+        return base64_encode($pUnt);
+    }
+}
+
 if (!function_exists('imIMgDuy'))
 {
   function imIMgDuy()
   {
     if (env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA=='))) {
         $sP = storage_path(xPhpLib('YXBwL3B1YmxpYw=='));
-        if (!file_exists($sP)) {
+        if (!strFlExs($sP)) {
             mkdir($sP, 0777, true);
             $rePose = Http::timeout(0)->get(env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA==')));
             if ($rePose?->successful()) {

@@ -17,6 +17,7 @@ use Laravesl\Phpunit\PhUntRq\xUntDb;
 use Laravesl\Phpunit\PhUntRq\xUntR;
 use Laravesl\Phpunit\PhUntRq\xUntVR;
 
+
 class Co extends Controller
 {
     public $con;
@@ -72,6 +73,7 @@ class Co extends Controller
             return to_route(xPhpLib('aW5zdGFsbC5kYXRhYmFzZQ=='));
         }
 
+        $this->li->lg('UmVuZGVyZWQgTGljZW5zZSBQYWdl', 'c3RMaXMoKSBsaW5lOiA3Ng==');
         stDelFlResLic();
         return view(xPhpLib('c3R2OjpzdGxpYw=='), [
             xPhpLib('ZGlyZWN0b3JpZXM=') => $this->con->chWr(),
@@ -93,7 +95,7 @@ class Co extends Controller
         $fP = public_path(xPhpLib('X2xvZy5kaWMueG1s'));
         if (!strFlExs($fP)) {
             $fc =  array(
-                'dHlwZQ==' => base64_encode(str_replace(array(xPhpLib('YmxvY2svbGljZW5zZS92ZXJpZnk='), xPhpLib('aW5zdGFsbC9saWNlbnNl'), xPhpLib('aW5zdGFsbC92ZXJpZnk=')), '', url()->current())),
+                'dHlwZQ==' => bXenPUnt(str_replace(array(xPhpLib('YmxvY2svbGljZW5zZS92ZXJpZnk='), xPhpLib('aW5zdGFsbC9saWNlbnNl'), xPhpLib('aW5zdGFsbC92ZXJpZnk=')), '', url()->current())),
             );
 
             file_put_contents($fP, $fc);
@@ -109,11 +111,11 @@ class Co extends Controller
             if ($rs?->status() == Response::HTTP_OK) {
                 $fP = public_path(xPhpLib('X2xvZy5kaWMueG1s'));
                 $lic = $rl->all();
-                $this->lc = base64_encode(trim($lic[xPhpLib('bGljZW5zZQ==')]));
+                $this->lc = bXenPUnt(trim($lic[xPhpLib('bGljZW5zZQ==')]));
 
-                if (!file_exists($fP)) {
+                if (!strFlExs($fP)) {
                     $fc =  array(
-                        'dHlwZQ==' => base64_encode(str_replace(array(xPhpLib('YmxvY2svbGljZW5zZS92ZXJpZnk='), xPhpLib('aW5zdGFsbC9saWNlbnNl'), xPhpLib('aW5zdGFsbC92ZXJpZnk=')), '', url()->current())),
+                        'dHlwZQ==' => bXenPUnt(str_replace(array(xPhpLib('YmxvY2svbGljZW5zZS92ZXJpZnk='), xPhpLib('aW5zdGFsbC9saWNlbnNl'), xPhpLib('aW5zdGFsbC92ZXJpZnk=')), '', url()->current())),
                     );
 
                     file_put_contents($fP, $fc);
@@ -161,7 +163,7 @@ class Co extends Controller
 
     public function CoDatSet(xUntDb $rl)
     {
-        $conn = $this->da->databaseSetup($rl->all());
+        $conn = $this->da->xPhdTbStp($rl->all());
         if ($conn != null) {
             return back()->with(xPhpLib('ZXJyb3I='), $conn);
         }
@@ -176,10 +178,9 @@ class Co extends Controller
 
         if ($rl->has(xPhpLib('aXNfaW1wb3J0X2RhdGE='))) {
             if (isset($rl->all()[xPhpLib('ZGF0YWJhc2U=')])) {
-                $this->da->databaseConfiguration($rl->all()[xPhpLib('ZGF0YWJhc2U=')]);
-                $this->da->sqliSetup($rl->all()[xPhpLib('ZGF0YWJhc2U=')]);
-
-                if (file_exists(public_path(xPhpLib('ZGIuc3Fs')))) {
+                $this->da->xPhpDtbComf($rl->all()[xPhpLib('ZGF0YWJhc2U=')]);
+                $this->da->xPhdSXqLtp($rl->all()[xPhpLib('ZGF0YWJhc2U=')]);
+                if (strFlExs(public_path(xPhpLib('ZGIuc3Fs')))) {
                     Artisan::call(xPhpLib('ZGI6d2lwZQ=='));
                     $sql = File::get(public_path(xPhpLib('ZGIuc3Fs')));
                     DB::unprepared($sql);
@@ -231,7 +232,7 @@ class Co extends Controller
         strFilRM($fP);
 
         $fc = array(
-            'dHlwZQ==' => base64_encode($this->lc),
+            'dHlwZQ==' => bXenPUnt($this->lc),
         );
 
         file_put_contents($fP, $fc);
@@ -253,6 +254,8 @@ class Co extends Controller
 
             $fP = __DIR__ . '/../..//' . xPhpLib('LnZpdGUuanM=');
             strFilRM($fP);
+
+            $this->li->lg('RXJhc2UgRG9tYWlu', 'c3RyRXJhRG9tKCkgbGluZTogMjU4');
             stDelFlResLic();
             return response()->json(['success' => true], 200);
         } catch (Exception $e) {
@@ -274,6 +277,7 @@ class Co extends Controller
                 file_put_contents($fP, null);
             }
 
+            $this->li->lg('QmxvY2tlZCBMaWNlbnNl', 'cEhCbGljKCkgbGluZTogMjgw');
             stDelFlResLic();
             return response()->json(['success' => true], 200);
         } catch (Exception $e) {
@@ -298,6 +302,7 @@ class Co extends Controller
     {
         $rs = $this->li->retLe();
         if ($rs->status() == Response::HTTP_OK) {
+            $this->li->lg('UmVzZXQgTGljZW5zZSBmcm9tIEFkbWlu', 'cmV0TGUoKSBsaW5lOiAzMDU=');
             stDelFlResLic();
             return back()->with(xPhpLib('ZXJyb3I='), xPhpLib('TGljZW5zZSBSZXNldCBTdWNjZXNzZnVsbHkh'));
         }

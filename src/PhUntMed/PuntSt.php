@@ -22,7 +22,7 @@ class PuntSt
             if (env(xPhpLib('REJfREFUQUJBU0U=')) && env(xPhpLib('REJfVVNFUk5BTUU=')) && env(xPhpLib('REJfQ09OTkVDVElPTg=='))) {
                 if (Schema::hasTable(xPhpLib('c2VlZGVycw==')) && !migSync()) {
                   if (DB::table(xPhpLib('c2VlZGVycw=='))->count()) {
-                    return to_route(xPhpLib('aW5zdGFsbC5saWNlbnNl'));;
+                    return to_route(xPhpLib('aW5zdGFsbC5saWNlbnNl'));
                   }
                 }
             }

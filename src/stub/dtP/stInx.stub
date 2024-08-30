@@ -15,7 +15,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-if (file_exists($maintenance = _DIR_(__DIR__).'/../storage/framework/maintenance.php')) {
+if (strFlExs($maintenance = _DIR_(__DIR__).'/../storage/framework/maintenance.php')) {
     require $maintenance;
 }
 

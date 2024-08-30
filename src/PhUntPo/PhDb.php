@@ -17,13 +17,13 @@ use Jackiedo\DotenvEditor\Facades\DotenvEditor;
  */
 class PhDb
 {
-    public function databaseSetup($phDb)
+    public function xPhdTbStp($phDb)
     {
-        $this->databaseConfiguration($phDb[xPhpLib('ZGF0YWJhc2U=')]);
+        $this->xPhpDtbComf($phDb[xPhpLib('ZGF0YWJhc2U=')]);
         try {
 
-            $this->sqliSetup($phDb[xPhpLib('ZGF0YWJhc2U=')]);
-            Artisan::call('migrate:fresh');
+            $this->xPhdSXqLtp($phDb[xPhpLib('ZGF0YWJhc2U=')]);
+            Artisan::call(xPhpLib('bWlncmF0ZTpmcmVzaA=='));
 
         } catch (Exception $e) {
 
@@ -31,14 +31,14 @@ class PhDb
         }
     }
 
-    public function sqliSetup($phDb)
+    public function xPhdSXqLtp($phDb)
     {
         new mysqli($phDb[xPhpLib('REJfSE9TVA==')], $phDb[xPhpLib('REJfVVNFUk5BTUU=')],
                 $phDb[xPhpLib('REJfUEFTU1dPUkQ=')], $phDb[xPhpLib('REJfREFUQUJBU0U=')],
                 $phDb[xPhpLib('REJfUE9SVA==')]);
     }
 
-    public function databaseConfiguration($phDb)
+    public function xPhpDtbComf($phDb)
     {
         config([
             xPhpLib('ZGF0YWJhc2UuZGVmYXVsdA==') => xPhpLib('bXlzcWw='),
@@ -55,25 +55,25 @@ class PhDb
 
     public function admStp($a, $phDb = null)
     {
-        $role = Role::where(xPhpLib('bmFtZQ=='), xPhpLib('QWRtaW4='))->first();
-        if (!$role) {
-            $role = Role::create([xPhpLib('bmFtZQ==') => xPhpLib('QWRtaW4=')]);
-            $role->givePermissionTo(Permission::all());
+        $rlE = Role::where(xPhpLib('bmFtZQ=='), xPhpLib('QWRtaW4='))->first();
+        if (!$rlE) {
+            $rlE = Role::create([xPhpLib('bmFtZQ==') => xPhpLib('QWRtaW4=')]);
+            $rlE->givePermissionTo(Permission::all());
         }
 
-        $user = User::whereHas('roles', function($q) {
+        $xPuSeX = User::whereHas('roles', function($q) {
             $q->where(xPhpLib('bmFtZQ=='), xPhpLib('QWRtaW4='));
         })?->first();
 
-        if (!$user) {
-            $user = User::factory()->create([
+        if (!$xPuSeX) {
+            $xPuSeX = User::factory()->create([
                 xPhpLib('bmFtZQ==') => $a[xPhpLib('Zmlyc3RfbmFtZQ==')].' '.$a['last_name'],
                 xPhpLib('ZW1haWw=') => $a[xPhpLib('ZW1haWw=')],
                 xPhpLib('ZW1haWxfdmVyaWZpZWRfYXQ=') => now(),
                 xPhpLib('cGFzc3dvcmQ=') => Hash::make($a[xPhpLib('cGFzc3dvcmQ=')]),
                 xPhpLib(xPhpLib('c3lzdGVtX3Jlc2VydmU=')) => true,
             ]);
-            $user->assignRole($role);
+            $xPuSeX->assignRole($rlE);
         }
     }
 
