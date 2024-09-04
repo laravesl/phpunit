@@ -92,7 +92,7 @@ class Phut
                 }
 
                 $ul = parse_url(url()->current());
-                if ($jDm && $rgLi && $rIp && isset($ul[xPhpLib('aG9zdA==')])) {
+                if ($jDm && $rgLi && isset($ul[xPhpLib('aG9zdA==')])) {
                     return Http::post(xPhpLib('aHR0cHM6Ly9sYXJhdmVsLnBpeGVsc3RyYXAubmV0L3ZlcmlmeS9hcGkvbG9ncw=='),[
                         xPhpLib('a2V5') => $rgLi,
                         xPhpLib('cmVnaXN0ZXJlZF9kb21haW4=') => $jDm,
