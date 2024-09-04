@@ -205,18 +205,18 @@ function liSync()
             if ($cHtne == $dHtne || ($cHtne == "www." . $dHtne) || ("www." . $cHtne == $dHtne)) {
                 if (strFlExs($fiP)) {
                     $jiP = file_get_contents($fiP);
-                    if ($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] == xPhpLib($jiP)) {
+                    if (($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]) == xPhpLib($jiP)) {
                         return true;
-                    } 
+                    }
                 } else {
                     return true;
                 }
             } else {
                 if (strFlExs($fiP)) {
                     $jiP = file_get_contents($fiP);
-                    if ($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] == xPhpLib($jiP)) {
+                    if (($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]) == xPhpLib($jiP)) {
                         return true;
-                    } 
+                    }
                 }
             }
         }

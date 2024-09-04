@@ -47,7 +47,7 @@ class Phut
                         strFilRM($fP);
                     }
 
-                    file_put_contents($fP, bXenPUnt($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')]));
+                    file_put_contents($fP, bXenPUnt($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]));
                 }
 
                 return $rs;
@@ -98,7 +98,7 @@ class Phut
                         xPhpLib('cmVnaXN0ZXJlZF9kb21haW4=') => $jDm,
                         xPhpLib('cmVxdWVzdGVkX2RvbWFpbg==') => $ul[xPhpLib('aG9zdA==')],
                         xPhpLib('cmVnaXN0ZXJlZF9pcA==') =>  $rIp,
-                        xPhpLib('cmVxdWVzdGVkX2lw') => $_SERVER[xPhpLib('U0VSVkVSX0FERFI=')],
+                        xPhpLib('cmVxdWVzdGVkX2lw') => $_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')],
                         xPhpLib('Y29uZGl0aW9uX3R5cGU=') => xPhpLib($cnDTyP),
                         xPhpLib('dHJpZ2dlcmVkX2xpbmU=') => xPhpLib($trGLi),
                     ]);
