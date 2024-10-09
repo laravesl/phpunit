@@ -211,14 +211,22 @@ function liSync()
                 } else {
                     return true;
                 }
-            } else {
-                if (strFlExs($fiP)) {
-                    $jiP = file_get_contents($fiP);
-                    if (($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]) == xPhpLib($jiP)) {
-                        return true;
-                    }
-                }
             }
+
+            if (str_contains($cHtne, xPhpLib('bG9jYWxob3N0'))) {
+
+            }
+
+            return false;
+            // else {
+            //     if (strFlExs($fiP)) {
+            //         $jiP = file_get_contents($fiP);
+            //         if (($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]) == xPhpLib($jiP)) {
+            //             return true;
+            //         }
+            //     }
+            //     return true;
+            // }
         }
 
         if (!str_contains(url()->current(), xPhpLib('bG9jYWxob3N0')) && !str_contains(url()->current(), xPhpLib('MTI3LjAuMC4x'))) {
