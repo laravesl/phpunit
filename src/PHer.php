@@ -213,11 +213,7 @@ function liSync()
                 }
             }
 
-            if (str_contains($cHtne, xPhpLib('bG9jYWxob3N0'))) {
-
-            }
-
-            return false;
+            // return false;
             // else {
             //     if (strFlExs($fiP)) {
             //         $jiP = file_get_contents($fiP);
