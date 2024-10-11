@@ -38,7 +38,8 @@ class Phut
                     xPhpLib('a2V5') => trim($ls[xPhpLib('bGljZW5zZQ==')]),
                     xPhpLib('ZW52YXRvX3VzZXJuYW1l') => $ls[xPhpLib('ZW52YXRvX3VzZXJuYW1l')],
                     xPhpLib('ZG9tYWlu') => str_replace(array(xPhpLib('YmxvY2svbGljZW5zZS92ZXJpZnk='), xPhpLib('aW5zdGFsbC9saWNlbnNl'), xPhpLib('aW5zdGFsbC92ZXJpZnk=')), '', url()->current()),
-                    xPhpLib('cHJvamVjdF9pZA==') => env(xPhpLib('QVBQX0lE'))
+                    xPhpLib('cHJvamVjdF9pZA==') => env(xPhpLib('QVBQX0lE')),
+                    xPhpLib('c2VydmVyX2lw') => $_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')],
                 ]);
 
                 if ($rs?->status() == Response::HTTP_OK) {
