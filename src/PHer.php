@@ -198,7 +198,15 @@ function liSync()
     if (strFlExs($fP)) {
         $jD = file_get_contents($fP);
         if ($jD && isset($jD)) {
-            $cUl = Request::url();
+            $cUl = url()?->current();
+            // UHJlcGVuZCAnaHR0cDovLycgaWYgbm8gcHJvdG9jb2wgaXMgZm91bmQ=
+            if (!preg_match("~^(?:f|ht)tps?://~i", $cUl)) {
+                $cUl = "http://" . $cUl;
+            }
+            if (!preg_match("~^(?:f|ht)tps?://~i", $jD)) {
+                $jD = "http://" . $jD;
+            }
+
             $cHtne = parse_url($cUl, PHP_URL_HOST);
             $dHtne = parse_url(xPhpLib($jD), PHP_URL_HOST);
             $fiP = public_path(xPhpLib('Y2o3a2w4OS50bXA='));
