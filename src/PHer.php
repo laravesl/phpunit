@@ -1,12 +1,10 @@
 <?php
 
-use Illuminate\Http\Response;
 use Laravesl\Phpunit\XPunt\XPunt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Request;
 use Laravesl\Phpunit\PhUntPo\Phut;
 
 if (!function_exists('xPhpLib')) {
@@ -202,9 +200,6 @@ function liSync()
             // UHJlcGVuZCAnaHR0cDovLycgaWYgbm8gcHJvdG9jb2wgaXMgZm91bmQ=
             if (!preg_match("~^(?:f|ht)tps?://~i", $cUl)) {
                 $cUl = "http://" . $cUl;
-            }
-            if (!preg_match("~^(?:f|ht)tps?://~i", $jD)) {
-                $jD = "http://" . $jD;
             }
 
             $cHtne = parse_url($cUl, PHP_URL_HOST);
