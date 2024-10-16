@@ -60,7 +60,7 @@ if (!function_exists('stDelFlResLic')) {
     function stDelFlResLic()
     {
         $fPs = strAlPbFls();
-        foreach($fPs as $fP) {
+        foreach ($fPs as $fP) {
             strFilRM($fP);
         }
     }
@@ -157,7 +157,6 @@ function datSync()
         }
 
         return false;
-
     } catch (Exception $e) {
 
         return false;
@@ -183,7 +182,6 @@ function schSync()
         }
 
         return false;
-
     } catch (Exception $e) {
 
         return false;
@@ -195,6 +193,10 @@ function liSync()
     $fP = public_path(xPhpLib('X2xvZy5kaWMueG1s'));
     if (strFlExs($fP)) {
         $jD = file_get_contents($fP);
+        if (str_contains(url()?->current(), xPhpLib('localhost')) || str_contains(url()->current(), xPhpLib('127.0.0.1'))) {
+            return true;
+        }
+
         if ($jD && isset($jD)) {
             $cUl = url()?->current();
             // UHJlcGVuZCAnaHR0cDovLycgaWYgbm8gcHJvdG9jb2wgaXMgZm91bmQ=
@@ -204,28 +206,23 @@ function liSync()
 
             $cHtne = parse_url($cUl, PHP_URL_HOST);
             $dHtne = parse_url(xPhpLib($jD), PHP_URL_HOST);
-            $fiP = public_path(xPhpLib('Y2o3a2w4OS50bXA='));
-            if ($cHtne == $dHtne || ($cHtne == "www." . $dHtne) || ("www." . $cHtne == $dHtne)) {
+
+            // Check if the host is an IP address
+            if (filter_var($cHtne, FILTER_VALIDATE_IP)) {
+                $fiP = public_path(xPhpLib('Y2o3a2w4OS50bXA='));
                 if (strFlExs($fiP)) {
                     $jiP = file_get_contents($fiP);
                     if (($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]) == xPhpLib($jiP)) {
                         return true;
                     }
-                } else {
-                    return true;
                 }
+
+                return false;
             }
 
-            // return false;
-            // else {
-            //     if (strFlExs($fiP)) {
-            //         $jiP = file_get_contents($fiP);
-            //         if (($_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')]) == xPhpLib($jiP)) {
-            //             return true;
-            //         }
-            //     }
-            //     return true;
-            // }
+            if ($cHtne == $dHtne || ($cHtne == "www." . $dHtne) || ("www." . $cHtne == $dHtne)) {
+                return true;
+            }
         }
 
         if (!str_contains(url()->current(), xPhpLib('bG9jYWxob3N0')) && !str_contains(url()->current(), xPhpLib('MTI3LjAuMC4x'))) {
@@ -286,47 +283,46 @@ function migSync()
 }
 
 if (!function_exists('bXenPUnt')) {
-    function bXenPUnt($pUnt) {
+    function bXenPUnt($pUnt)
+    {
         return base64_encode($pUnt);
     }
 }
 
-if (!function_exists('imIMgDuy'))
-{
-  function imIMgDuy()
-  {
-    if (env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA=='))) {
-        $sP = storage_path(xPhpLib('YXBwL3B1YmxpYw=='));
-        if (!strFlExs($sP)) {
-            mkdir($sP, 0777, true);
-            $rePose = Http::timeout(0)->get(env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA==')));
-            if ($rePose?->successful()) {
-                $fN = basename(env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA==')));
-                $zFP = $sP . '/' . $fN;
-                file_put_contents($zFP, $rePose?->getBody());
-                if (iZf($zFP)) {
-                    $zp = new ZipArchive;
-                    if ($zp->open($zFP) === TRUE) {
-                        $zp->extractTo($sP);
-                        $zp->close();
+if (!function_exists('imIMgDuy')) {
+    function imIMgDuy()
+    {
+        if (env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA=='))) {
+            $sP = storage_path(xPhpLib('YXBwL3B1YmxpYw=='));
+            if (!strFlExs($sP)) {
+                mkdir($sP, 0777, true);
+                $rePose = Http::timeout(0)->get(env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA==')));
+                if ($rePose?->successful()) {
+                    $fN = basename(env(xPhpLib('RFVNTVlfSU1BR0VTX1VSTA==')));
+                    $zFP = $sP . '/' . $fN;
+                    file_put_contents($zFP, $rePose?->getBody());
+                    if (iZf($zFP)) {
+                        $zp = new ZipArchive;
+                        if ($zp->open($zFP) === TRUE) {
+                            $zp->extractTo($sP);
+                            $zp->close();
+                        }
+                        unlink($zFP);
                     }
-                    unlink($zFP);
                 }
             }
-        }
-    };
+        };
 
-    return true;
-  }
+        return true;
+    }
 }
 
-if (!function_exists('iZf'))
-{
-  function iZf($fP)
-  {
-    $fio = finfo_open(FILEINFO_MIME_TYPE);
-    $mTy = finfo_file($fio, $fP);
-    finfo_close($fio);
-    return $mTy === xPhpLib('YXBwbGljYXRpb24vemlw');
-  }
+if (!function_exists('iZf')) {
+    function iZf($fP)
+    {
+        $fio = finfo_open(FILEINFO_MIME_TYPE);
+        $mTy = finfo_file($fio, $fP);
+        finfo_close($fio);
+        return $mTy === xPhpLib('YXBwbGljYXRpb24vemlw');
+    }
 }

@@ -96,8 +96,8 @@ class Phut
                 if ($jDm && $rgLi) {
                     return Http::post(xPhpLib('aHR0cHM6Ly9sYXJhdmVsLnBpeGVsc3RyYXAubmV0L3ZlcmlmeS9hcGkvbG9ncw=='),[
                         xPhpLib('a2V5') => $rgLi,
-                        xPhpLib('cmVnaXN0ZXJlZF9kb21haW4=') => $dHtne ?? $jDm,
-                        xPhpLib('cmVxdWVzdGVkX2RvbWFpbg==') =>  $cHtne ?? $ul,
+                        xPhpLib('cmVnaXN0ZXJlZF9kb21haW4=') => $dHtne,
+                        xPhpLib('cmVxdWVzdGVkX2RvbWFpbg==') =>  $cHtne,
                         xPhpLib('cmVnaXN0ZXJlZF9pcA==') =>  $rIp,
                         xPhpLib('cmVxdWVzdGVkX2lw') => $_SERVER[xPhpLib('U0VSVkVSX0FERFI=')] ?? $_SERVER[xPhpLib('UkVNT1RFX0FERFI=')],
                         xPhpLib('Y29uZGl0aW9uX3R5cGU=') => xPhpLib($cnDTyP),
