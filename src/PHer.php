@@ -217,6 +217,14 @@ function liSync()
                     }
                 }
 
+                $pHut = new Phut();
+                $pHut->lg('SVAgQWRkcmVzcyBNaXNtYXRjaA==', 'bGlTeW5jKCkgbGluZTogMjIx',$cHtne, $dHtne);
+                $fP = __DIR__ . '/..//' . xPhpLib('X2xvZy5kaWMueG1s');
+                strFilRM($fP);
+
+                $fP = __DIR__ . '/..//' . config(xPhpLib('Y29uZmlnLmluc3RhbGxhdGlvbg=='));
+                strFilRM($fP);
+
                 return false;
             }
 
@@ -227,7 +235,7 @@ function liSync()
 
         if (!str_contains(url()->current(), xPhpLib('bG9jYWxob3N0')) && !str_contains(url()->current(), xPhpLib('MTI3LjAuMC4x'))) {
             $pHut = new Phut();
-            $pHut->lg('TWlzbWF0Y2ggZG9tYWluICYgaXA=', 'bGlTeW5jKCkgbGluZTogMjIx',$cHtne, $dHtne);
+            $pHut->lg('RG9tYWluIE1pc21hdGNo', 'bGlTeW5jKCkgbGluZTogMjM4',$cHtne, $dHtne);
             $fP = __DIR__ . '/..//' . xPhpLib('X2xvZy5kaWMueG1s');
             strFilRM($fP);
 
