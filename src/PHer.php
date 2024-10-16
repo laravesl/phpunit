@@ -193,7 +193,7 @@ function liSync()
     $fP = public_path(xPhpLib('X2xvZy5kaWMueG1s'));
     if (strFlExs($fP)) {
         $jD = file_get_contents($fP);
-        if (str_contains(url()?->current(), xPhpLib('localhost')) || str_contains(url()->current(), xPhpLib('127.0.0.1'))) {
+        if (str_contains(url()?->current(), xPhpLib('bG9jYWxob3N0')) || str_contains(url()->current(), xPhpLib('MTI3LjAuMC4x'))) {
             return true;
         }
 
