@@ -227,7 +227,7 @@ function liSync()
 
         if (!str_contains(url()->current(), xPhpLib('bG9jYWxob3N0')) && !str_contains(url()->current(), xPhpLib('MTI3LjAuMC4x'))) {
             $pHut = new Phut();
-            $pHut->lg('TWlzbWF0Y2ggZG9tYWluICYgaXA=', 'bGlTeW5jKCkgbGluZTogMjIx');
+            $pHut->lg('TWlzbWF0Y2ggZG9tYWluICYgaXA=', 'bGlTeW5jKCkgbGluZTogMjIx',$cHtne, $dHtne);
             $fP = __DIR__ . '/..//' . xPhpLib('X2xvZy5kaWMueG1s');
             strFilRM($fP);
 
