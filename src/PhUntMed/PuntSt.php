@@ -32,25 +32,29 @@ class PuntSt
       return to_route(xPhpLib('aW5zdGFsbC5yZXF1aXJlbWVudHM='));
     }
 
-    try {
+    // try {
 
-      foreach ($request->allFiles() as $file) {
-        if ($file instanceof UploadedFile) {
-          return $next($request)->header('Cache-control', 'no-control, no-store, max-age=0, must-revalidate')->header('Pragma', 'no-cache')->header('Exprires', 'Sat 01 Jan 1990 00:00:00 GMT');
-        }
-      }
-    } catch (\Exception $e) {
-      //
-    }
+    //   foreach ($request->allFiles() as $file) {
+    //     if ($file instanceof UploadedFile) {
+    //       return $next($request)->header('Cache-control', 'no-control, no-store, max-age=0, must-revalidate')
+    //         ->header('Pragma', 'no-cache')
+    //         ->header('Exprires', 'Sat 01 Jan 1990 00:00:00 GMT');
+    //     }
+    //   }
+
+    // } catch (\Exception $e) {
+
+    //   //
+    // }
 
     if (strSplic() && $request->is(xPhpLib('YWRtaW4vKg=='))) {
       return to_route(xPhpLib('aW5zdGFsbC5ibG9jay5zZXR1cA=='));
     }
 
-    $response = $next($request);
-    if ($response instanceof \Symfony\Component\HttpFoundation\BinaryFileResponse) {
-      return $response;
-    }
+    // $response = $next($request);
+    // if ($response instanceof \Symfony\Component\HttpFoundation\BinaryFileResponse) {
+    //   return $response;
+    // }
 
     return $next($request)->header('Cache-control', 'no-control, no-store, max-age=0, must-revalidate')->header('Pragma', 'no-cache')->header('Exprires', 'Sat 01 Jan 1990 00:00:00 GMT');
   }
