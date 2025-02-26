@@ -75,7 +75,6 @@ class PhUnt extends ServiceProvider
         $this->app->register(PhUntEn::class);
         $this->app->register(PhAs::class);
         $this->app->register(PhEra::class);
-        Artisan::call(xPhpLib('b3B0aW1pemU6Y2xlYXI='));
         scDotPkS();
     }
 }
