@@ -182,6 +182,7 @@ function schSync()
         }
 
         return false;
+
     } catch (Exception $e) {
 
         return false;
