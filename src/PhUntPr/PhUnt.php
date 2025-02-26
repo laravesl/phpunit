@@ -68,9 +68,9 @@ class PhUnt extends ServiceProvider
             PAipSt::class,
             PAipVr::class,
             PAipBl::class,
-            \Illuminate\Session\Middleware\StartSession::class,
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class
         ]);
         $this->app->register(PhUntEn::class);
         $this->app->register(PhAs::class);

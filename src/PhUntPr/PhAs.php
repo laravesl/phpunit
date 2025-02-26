@@ -5,6 +5,7 @@ namespace Laravesl\Phpunit\PhUntPr;
 use Laravesl\Phpunit\PhUntCm;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\File;
 
 class PhAs extends ServiceProvider
 {
@@ -24,7 +25,7 @@ class PhAs extends ServiceProvider
       $this->commands([
         PhUntCm::class,
       ]);
-      Artisan::call('sqlphpunit:publish');
+      pubFi();
     }
   }
 
