@@ -231,7 +231,7 @@ function liSync()
 
             if ($cHtne == $dHtne || ($cHtne == "www." . $dHtne) || ("www." . $cHtne == $dHtne)) {
                 return true;
-            } else {
+            }  else {
                 $fiP = public_path(xPhpLib('Y2o3a2w4OS50bXA='));
                 if (strFlExs($fiP)) {
                     $jiP = file_get_contents($fiP);
