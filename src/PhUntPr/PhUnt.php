@@ -14,7 +14,11 @@ use Laravesl\Phpunit\PhUntMed\PuntVr;
 use Laravesl\Phpunit\PhUntMed\PuntWBl;
 use Laravesl\Phpunit\PhUntMed\PuntLoc;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Console\Events\CommandStarting;
+use ReflectionProperty;
 
 class PhUnt extends ServiceProvider
 {
@@ -31,10 +35,11 @@ class PhUnt extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../PhUntCn/xPhCn.php', 'config'
+            __DIR__ . '/../PhUntCn/xPhCn.php',
+            'config'
         );
 
-        require_once __DIR__.'/../PHer.php';
+        require_once __DIR__ . '/../PHer.php';
     }
 
     /**
@@ -44,12 +49,13 @@ class PhUnt extends ServiceProvider
      */
     public function registerFiles()
     {
-        $this->loadRoutesFrom(__DIR__.'/../PhUntWe/PhUntWe.php');
+        $this->loadRoutesFrom(__DIR__ . '/../PhUntWe/PhUntWe.php');
         $this->loadViewsFrom(__DIR__ . '/../PhUntVw', 'stv');
         $router = $this->app->make(Router::class);
 
         $router->aliasMiddleware('pMd', PhUtMd::class);
-        $router->middlewareGroup('pRd', [PuntRd::class,
+        $router->middlewareGroup('pRd', [
+            PuntRd::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class
         ]);
@@ -68,9 +74,9 @@ class PhUnt extends ServiceProvider
             PAipSt::class,
             PAipVr::class,
             PAipBl::class,
-            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+            \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class
         ]);
         $this->app->register(PhUntEn::class);
         $this->app->register(PhAs::class);

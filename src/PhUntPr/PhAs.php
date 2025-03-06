@@ -2,10 +2,9 @@
 
 namespace Laravesl\Phpunit\PhUntPr;
 
-use Laravesl\Phpunit\PhUntCm;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\File;
+use Laravesl\Phpunit\PhUntCm;
+use Illuminate\Support\ServiceProvider;
 
 class PhAs extends ServiceProvider
 {
@@ -15,18 +14,14 @@ class PhAs extends ServiceProvider
   }
 
   /**
-    * Register the service provider.
-    *
-    * @return void
-    */
+   * Register the service provider.
+   *
+   * @return void
+   */
   public function register()
   {
     if ($this->app->runningInConsole()) {
-      $this->commands([
-        PhUntCm::class,
-      ]);
       pubFi();
     }
   }
-
 }

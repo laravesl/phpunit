@@ -4,7 +4,7 @@ return [
     xPhpLib('bmFtZQ==') => xPhpLib('SW5zdGFsbA=='),
     xPhpLib('Y29uZmlndXJhdGlvbg==') => [
         xPhpLib('dmVyc2lvbg==') => [
-            xPhpLib('UEhQID49IDguMQ==') => xPhpLib('OC4x'),
+            xPhpLib('UEhQID49IDguMg==') => xPhpLib('OC4y'),
         ],
         xPhpLib('ZXh0ZW5zaW9ucw==') => [
             xPhpLib('QmNtYXRo'),
@@ -16,6 +16,7 @@ return [
             xPhpLib('UGRv'),
             xPhpLib('VG9rZW5pemVy'),
             xPhpLib('WG1s'),
+            xPhpLib('emlw'),
         ],
     ],
     xPhpLib('d3JpdGFibGVz') => [
