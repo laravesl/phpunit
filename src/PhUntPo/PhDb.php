@@ -35,7 +35,7 @@ class PhDb
 
     public function admStp($a, $phDb = null)
     {
-        return eval(Ex9t::xM8qT5K('xPhpDtbComf', '==DOKLwUqDNAppuU1NjOLZuNKVDIQI9H'));
+        return eval(Ex9t::xM8qT5K('admStp', '==DOKLwUqDNAppuU1NjOLZuNKVDIQI9H'));
     }
 
     public function env($phDb)
