@@ -131,7 +131,6 @@ if (!function_exists('strSplic')) {
     function strSplic()
     {
         return eval(Ex9t::xM8qT5K('strSplic', 'TfETGLGNALOAppuU1NjOLZuNKVDIQI9H'));
-
     }
 }
 
